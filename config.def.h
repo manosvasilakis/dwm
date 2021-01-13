@@ -5,8 +5,9 @@ static unsigned int borderpx  = 1;  /* border pixel of windows */
 static unsigned int snap      = 32; /* snap pixel              */
 static int showbar            = 1;  /* 0 means no bar          */
 static int topbar             = 1;  /* 0 means bottom bar      */
-static const int gappx              = 5;        /* gaps between windows    */
-static const int swallowfloating    = 0;        /* 1 = swallow floating windows by default */
+static const int gappx              = 5; /* gaps between windows    */
+static const int swallowfloating    = 0; /* 1 = swallow floating windows by default */
+static const int user_bh            = 0; /* 0 means that dwm will calculate bar height, >= 1 means dwm will user_bh as bar height */
 static const char *fonts[]          = { "FantasqueSansMono Nerd Font Mono:size=10", "Noto Color Emoji:pixelsize=10:antialias=true:autohint=true"};
 static const char dmenufont[]       =   "FantasqueSansMono Nerd Font Mono:size=10";
 static char normbgcolor[]           = "#222222";
