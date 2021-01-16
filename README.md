@@ -1,14 +1,14 @@
-dwm - dynamic window manager
+# dwm - dynamic window manager
 ============================
 dwm is an extremely fast, small, and dynamic window manager for X.
 
 
-Requirements
+## Requirements
 ------------
 In order to build dwm you need the Xlib header files.
 
 
-Installation
+## Installation
 ------------
 Edit config.mk to match your local setup (dwm is installed into
 the /usr/local namespace by default).
@@ -19,7 +19,7 @@ necessary as root):
     make clean install
 
 
-Running dwm
+## Running dwm
 -----------
 Add the following line to your .xinitrc to start dwm using startx:
 
@@ -42,7 +42,27 @@ like this in your .xinitrc:
     exec dwm
 
 
-Configuration
+## Configuration
 -------------
 The configuration of dwm is done by creating a custom config.h
 and (re)compiling the source code.
+
+## Features Added
+1. FullScreen any program with Super+f
+2. Custom bar height
+3. Show number of windows in every tag
+4. Autostart required app from within dwm
+5. Window Gaps in all layouts
+6. Extra Layouts:
+	1. Fibonacci Layout
+	2. Bottonstack Layout
+7. Application Scratchpads (like i3wm)
+8. Make a window sticky (follows u arround) Super+s
+9. Swallow useless windows
+10. Xresources color settings
+
+TODO:
+1. Statusbar Transparency
+2. Statusbar Padding
+3. Statusbar Click Support
+4. Systray Support
