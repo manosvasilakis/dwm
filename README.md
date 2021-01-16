@@ -1,5 +1,5 @@
 # dwm - dynamic window manager
-# ============================
+------------
 dwm is an extremely fast, small, and dynamic window manager for X.
 
 
@@ -48,6 +48,7 @@ The configuration of dwm is done by creating a custom config.h
 and (re)compiling the source code.
 
 ## Features Added
+-------------
 1. FullScreen any program with Super+f
 2. Custom bar height
 3. Show number of windows in every tag
@@ -65,4 +66,4 @@ TODO:
 1. Statusbar Transparency
 2. Statusbar Padding
 3. Statusbar Click Support
-4. Systray Support
+4. Statusbar Systray Support
