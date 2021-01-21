@@ -1,6 +1,6 @@
 .TH DWM 1 dwm\-VERSION
 .SH NAME
-dwm \- dynamic window manager
+dwm \- dynamic window manager (Manos Vasilakis Build 2021 \- manos@nosma.gr)
 .SH SYNOPSIS
 .B dwm
 .RB [ \-v ]
@@ -56,92 +56,335 @@ click on a tag label applies that tag to the focused window.
 click on a tag label adds/removes that tag to/from the focused window.
 .SS Keyboard commands
 .TP
-.B Mod1\-Shift\-Return
+.B Mod\-Return
 Start
 .BR st(1).
 .TP
-.B Mod1\-p
-Spawn
-.BR dmenu(1)
-for launching other programs.
+.B Alt\-0
+Set Volume to 100%.
 .TP
-.B Mod1\-,
-Focus previous screen, if any.
+.B Alt\-1
+Set Volume to 10%.
 .TP
-.B Mod1\-.
-Focus next screen, if any.
+.B Alt\-2
+Set Volume to 20%.
 .TP
-.B Mod1\-Shift\-,
-Send focused window to previous screen, if any.
+.B Alt\-3
+Set Volume to 30%.
 .TP
-.B Mod1\-Shift\-.
-Send focused window to next screen, if any.
+.B Alt\-4
+Set Volume to 40%.
 .TP
-.B Mod1\-b
-Toggles bar on and off.
+.B Alt\-5
+Set Volume to 50%.
 .TP
-.B Mod1\-t
-Sets tiled layout.
+.B Alt\-6
+Set Volume to 60%.
 .TP
-.B Mod1\-f
-Sets floating layout.
+.B Alt\-7
+Set Volume to 70%.
 .TP
-.B Mod1\-m
-Sets monocle layout.
+.B Alt\-8
+Set Volume to 80%.
 .TP
-.B Mod1\-space
-Toggles between current and previous layout.
+.B Alt\-9
+Set Volume to 90%.
 .TP
-.B Mod1\-j
-Focus next window.
+.B Alt\-Return
+Scratchpad Terminal Window
+.BR (st)
+\- spterm.
 .TP
-.B Mod1\-k
-Focus previous window.
+.B Alt\-Shift\-0
+Set Volume to 0%.
 .TP
-.B Mod1\-i
-Increase number of windows in master area.
+.B Alt\-space
+Toggle Keyboard Language us/gr
+.BR (kbselect).
 .TP
-.B Mod1\-d
-Decrease number of windows in master area.
+.B Insert
+Insert Snippet on the focused window
+.BR (dmenusnippets).
 .TP
-.B Mod1\-l
-Increase master area size.
+.B Mod\-0
+View the windows of all tags.
 .TP
-.B Mod1\-h
-Decrease master area size.
+.B Mod\-0\-Shift
+Make focused window visible in all tags - like sticky.
 .TP
-.B Mod1\-Return
-Zooms/cycles focused window to/from master area (tiled layouts only).
+.B Mod\-1
+Go to WorkSpace 0.
 .TP
-.B Mod1\-Shift\-c
-Close focused window.
+.B Mod\-1\-Shift
+Move window to WorkSpace 0.
 .TP
-.B Mod1\-Shift\-space
-Toggle focused window between tiled and floating state.
+.B Mod\-2
+Go to WorkSpace 1.
 .TP
-.B Mod1\-Tab
-Toggles to the previously selected tags.
+.B Mod\-2\-Shift
+Move window to WorkSpace 1.
 .TP
-.B Mod1\-Shift\-[1..n]
-Apply nth tag to focused window.
+.B Mod\-3
+Go to WorkSpace 2.
 .TP
-.B Mod1\-Shift\-0
-Apply all tags to focused window.
+.B Mod\-3\-Shift
+Move window to WorkSpace 2.
 .TP
-.B Mod1\-Control\-Shift\-[1..n]
-Add/remove nth tag to/from focused window.
+.B Mod\-4
+Go to WorkSpace 3.
 .TP
-.B Mod1\-[1..n]
-View all windows with nth tag.
+.B Mod\-4\-Shift
+Move window to WorkSpace 3.
 .TP
-.B Mod1\-0
-View all windows with any tag.
+.B Mod\-5
+Go to WorkSpace 4.
 .TP
-.B Mod1\-Control\-[1..n]
-Add/remove all windows with nth tag to/from the view.
+.B Mod\-5\-Shift
+Move window to WorkSpace 4.
 .TP
-.B Mod1\-Shift\-q
-Quit dwm.
+.B Mod\-6
+Go to WorkSpace 5.
+.TP
+.B Mod\-6\-Shift
+Move window to WorkSpace 5.
+.TP
+.B Mod\-7
+Go to WorkSpace 6.
+.TP
+.B Mod\-7\-Shift
+Move window to WorkSpace 6.
+.TP
+.B Mod\-8
+Go to WorkSpace 7.
+.TP
+.B Mod\-8\-Shift
+Move window to WorkSpace 7.
+.TP
+.B Mod\-9
+Go to WorkSpace 8.
+.TP
+.B Mod\-9\-Shift
+Move window to WorkSpace 8.
+.TP
+.B Mod\-Control\-b
+Refresh dwmblocks.
+.TP
+.B Mod\-Control\-equal
+Increase Num of Windows on Master area by +1.
+.TP
+.B Mod\-Control\-minus
+Increase Num of Windows on Master area by -1.
+.TP
+.B Mod\-Control\-x
+sxiv -r ~/media/pix.
+.TP
+.B Mod\-Escape
+Refresh dwm.
+.TP
+.B Mod\-F1
+Manage Monitor
+.BR (displayselect).
+.TP
+.B Mod\-F2
+Sync Mails
+.BR (autosyncmails).
+.TP
+.B Mod\-F3
+Mount External Drive
+.BR (dmenumount).
+.TP
+.B Mod\-F4
+Unmount External Drive
+.BR (dmenuumount).
+.TP
+.B Mod\-Print
+Record Menu
+.BR (dmenurecord).
+.TP
+.B Mod\-Return
+Run
+.BR st.
+.TP
+.B Mod\-Shift\-Escape
+Exit
+.BR Xorg.
+.TP
+.B Mod\-Shift\-Print
+Kill active recording
+.BR (dmenurecord kill).
+.TP
+.B Mod\-Shift\-Return
+Make Focused window Master.
+.TP
+.B Mod\-Shift\-b
+Toggle Bar.
+.TP
+.B Mod\-Shift\-comma
+tagmon -1.
+.TP
+.B Mod\-Shift\-e
+Open Network Manager
+.BR(nmtui).
+.TP
+.B Mod\-Shift\-equal
+Increase Gaps by +5.
+.TP
+.B Mod\-Shift\-f
+Set layout "><>" NULL [1].
+.TP
+.B Mod\-Shift\-g
+Set Gaps to 0.
+.TP
+.B Mod\-Shift\-m
+Set layout "[M]" monocle [2].
+.TP
+.B Mod\-Shift\-minus
+Decrease gaps by -5.
+.TP
+.B Mod\-Shift\-p
+Scratchpad GUI Password Manager \-
+.BR (keepassxc).
+.TP
+.B Mod\-Shift\-period
+tagmon +1.
+.TP
+.B Mod\-Shift\-q
+Kill focused window.
+.TP
+.B Mod\-Shift\-space
+togglefloating.
+.TP
+.B Mod\-Shift\-u
+Set layout "===" bstackhoriz [6].
+.TP
+.B Mod\-Shift\-v
+Open VimwikiIndex.
+.TP
+.B Mod\-Shift\-w
+$BROWSER --incognito.
+.TP
+.B Mod\-Shift\-x
+sxiv ~/media/pix/screenshots.
+.TP
+.B Mod\-Shift\-y
+Setlayout "[\\]" dwindle [4].
+.TP
+.B Mod\-Tab
+Toggle the last 2 tags.
+.TP
+.B Mod\-a
+Open the addresses book
+.BR (abook).
+.TP
+.B Mod\-b
+Select bookmark to open
+.BR (dmenubookmarks).
+.TP
+Mod\-c
+Scratchpad testoCalc
+.BR (bc)
+\- spcalc.
+.TP
+.B Mod\-comma
+focusmon -1.
+.TP
+.B Mod\-d
+Run
+.BR dmenu.
+.TP
+.B Mod\-e
+Open email client
+.BR (neomutt).
+.TP
+.B Mod\-equal
+Increase Sound +15.
+.TP
+.B Mod\-f
+Toggle focused Window Full Screen.
+.TP
+.B Mod\-g
+Set gaps to default value.
+.TP
+.B Mod\-grave
+Select emoji to use
+.B(dmenuunicode).
+.TP
+.B Mod\-h
+Resize Master \- Stack Areas by \-0.05.
+.TP
+.B Mod\-j
+Move Arround Windows +1.
+.TP
+.B Mod\-k
+Move Arround Windows -1.
+.TP
+.B Mod\-l
+Resize Master \- Stack Areas by \-0.05.
+.TP
+.B Mod\-m
+Mute Sound.
+.TP
+.B Mod\-minus
+Decrease Sound \-15.
+.TP
+.B Mod\-p
+.BR dmenupass.
+.TP
+.B Mod\-period
+focusmon +1.
+.TP
+.B Mod\-r
+Scratchpad filemanager
+.B (ranger)
+\- spfm.
+.TP
+.B Mod\-s
+Toggle Sticky Window.
+.TP
+.B Mod\-space
+Set layout {0}.
+.TP
+.B Mod\-t
+Set layout "[]=" tile [0].
+.TP
+.B Mod\-u
+Set layout "TTT" bstack [5].
+.TP
+.B Mod\-v
+Scratchpad AudioManager
+.BR (pulsemixer)
+\- spvol.
+.TP
+.B Mod\-w
+$BROWSER.
+.TP
+.B Mod\-x
+.BR dmenusxivdirpick.
+.TP
+.B Mod\-y
+Set layout "[@]" spiral [3].
+.TP
+.B Print
+Take FullScreen Screenshot.
+.TP
+.B Shift\- Print
+.BR maimpick.
+.TP
+.B XF86AudioLowerVolume
+Increase Volume \-5.
+.TP
+.B XF86AudioMicMute
+Open VolumeManager
+.BR (pulsemixer).
+.TP
+.B XF86AudioMute
+Toggle Volume Mute.
+.TP
+.B XF86AudioRaiseVolume
+Increase Volume +5.
+.TP
+.B XF86Launch1
+.BR sysact.
 .SS Mouse commands
 .TP
 .B Mod1\-Button1
