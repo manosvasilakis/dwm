@@ -1,4 +1,3 @@
 patches/
-config.h
 dwm
 *.o
