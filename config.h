@@ -30,7 +30,8 @@ static char *colors[][3] = {
 
 /* Cool Autostart */
 static const char *const autostart[] = {
-	"wallp",     NULL,    /* load a random wallp. */
+	"xrdb", "/home/manos/.config/x11/xresources", NULL, /* xresources color settings */
+	"wallp",     NULL,    /* wallpaper            */
 	"remaps",    NULL,    /* key remaps           */
 	"dunst",     NULL,    /* notifications server */
 	"unclutter", NULL,    /* Hide mouse when idle */
