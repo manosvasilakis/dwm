@@ -61,9 +61,11 @@ and (re)compiling the source code.
 8. Make a window sticky (follows u arround) Super+s
 9. Swallow useless windows
 10. Xresources color settings
+11. Systray Support
 
 TODO:
 1. Statusbar Transparency
 2. Statusbar Padding
-3. Statusbar Click Support
-4. Statusbar Systray Support
+	1. Make barpadding to work nicelly with the systray
+4. Statusbar Click Support
+5. ~~Statusbar Systray Support~~
