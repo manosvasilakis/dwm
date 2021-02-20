@@ -62,6 +62,26 @@ and (re)compiling the source code.
 9. Swallow useless windows
 10. Xresources color settings
 11. Systray Support
+12. fsignals
+
+## Patches Applied
+-------------
+1. dwm-actualfullscreen-20191112-cb3f58a.diff
+2. dwm-alpha-6.1.diff
+3. dwm-bar-height-6.2.diff
+4. dwm-clientindicatorshidevacant-6.2.diff
+5. dwm-cool-autostart-6.2.diff
+6. dwm-fsignal-6.2.diff
+7. dwm-layoutmenu-6.2.diff
+8. dwm-ru_gaps-6.2.diff
+9. dwm-ru_bottomstack-6.2.diff
+10. dwm-ru_fibonacci-6.2.diff
+11. dwm-scratchpads-20200414-728d397b.diff
+12. dwm-statuscmd-signal-6.2.diff
+13. dwm-sticky-6.1.diff
+14. dwm-swallow-20201211-61bb8b2.diff
+15. dwm-systray-20200914-61bb8b2.diff
+16. dwm-xresources-6.2.diff
 
 TODO:
 1. Statusbar Transparency

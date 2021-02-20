@@ -258,3 +258,13 @@ static Button buttons[] = {
 	{ ClkTagBar,            MODKEY,         Button1,        tag,            {0} },
 	{ ClkTagBar,            MODKEY,         Button3,        toggletag,      {0} },
 };
+
+#include "signalfuncs.c"
+/* signal definitions */
+/* signum must be greater than 0 */
+/* trigger signals using `xsetroot -name "fsignal:<signum>"` */
+static Signal signals[] = {
+	/* signum       function        argument  */
+	{ 1,            setlayout,      {.v = 0} },
+	{ 2,            reload_xrdb,    {0} },
+};

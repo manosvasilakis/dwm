@@ -176,7 +176,7 @@ static Button buttons[] = {
 	/* click                event mask      button          function        argument */
 	{ ClkLtSymbol,          0,              Button1,        setlayout,      {0} },
 	/* { ClkLtSymbol,          0,              Button3,        setlayout,      {.v = &layouts[2]} }, */
-+	{ ClkLtSymbol,          0,              Button3,        layoutmenu,     {0} },
+	{ ClkLtSymbol,          0,              Button3,        layoutmenu,     {0} },
 	{ ClkWinTitle,          0,              Button2,        zoom,           {0} },
 	{ ClkStatusText,        0,              Button1,        spawn,          {.v = statuscmd } },
 	{ ClkStatusText,        0,              Button2,        spawn,          {.v = statuscmd } },
@@ -189,3 +189,19 @@ static Button buttons[] = {
 	{ ClkTagBar,            MODKEY,         Button1,        tag,            {0} },
 	{ ClkTagBar,            MODKEY,         Button3,        toggletag,      {0} },
 };
+
+/* signal definitions */
+/* signum must be greater than 0 */
+/* trigger signals using `xsetroot -name "fsignal:<signum>"` */
+static Signal signals[] = {
+	/* signum       function        argument  */
+	{ 1,            setlayout,      {.v = 0} },
+};
+/*
+#!/bin/bash
+layouts="echo -e tiled\ncolumns\n..."
+layout=$($layouts | dmenu "$@")
+
+if [[ "$layout" == "tiled" ]];then xsetroot -name "fsignal:1"; fi
+...
+*/
