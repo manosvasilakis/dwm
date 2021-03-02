@@ -34,12 +34,11 @@ static char *colors[][3] = {
 
 /* Cool Autostart */
 static const char *const autostart[] = {
-	"xrdb", "/home/manos/.config/x11/xresources", NULL, /* xresources color settings */
-	"wallp",     NULL,    /* wallpaper            */
-	"remaps",    NULL,    /* key remaps           */
 	"dunst",     NULL,    /* notifications server */
-	"unclutter", NULL,    /* Hide mouse when idle */
 	"dwmblocks", NULL,    /* dwmblocks statusbar  */
+	"remaps",    NULL,    /* key remaps           */
+	"unclutter", NULL,    /* Hide mouse when idle */
+	"wallp",     NULL,    /* wallpaper            */
 	"xcompmgr",  NULL,    /* Transparency Effects */
 	NULL                  /* terminate            */
 };
@@ -227,7 +226,7 @@ static Key keys[] = {
 	{ ALTKEY,	      XK_8,      spawn,          SHCMD("pulsemixer --set-volume-all 80:80 && pkill -RTMIN+4 dwmblocks") },
 	{ ALTKEY,	      XK_9,      spawn,          SHCMD("pulsemixer --set-volume-all 90:90 && pkill -RTMIN+4 dwmblocks") },
 
-	{ ALTKEY,             XK_space,  spawn,          SHCMD("kbselect") },
+	{ ALTKEY,             XK_space,  spawn,          SHCMD("sb-kbselect") },
 	{ MODKEY,             XK_Escape, quit,           {1} },
 	{ MODKEY|ShiftMask,   XK_Escape, spawn,          SHCMD("kill -9 -1") },
 
@@ -264,7 +263,7 @@ static Button buttons[] = {
 /* signum must be greater than 0 */
 /* trigger signals using `xsetroot -name "fsignal:<signum>"` */
 static Signal signals[] = {
-	/* signum       function        argument  */
-	{ 1,            setlayout,      {.v = 0} },
-	{ 2,            reload_xrdb,    {0} },
+	/* signum  function     argument  */
+	{ 1,       setlayout,   {.v = 0} },
+	{ 2,       reload_dwm,  {0} },
 };
