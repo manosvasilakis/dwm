@@ -1,7 +1,5 @@
 void
-reload_xrdb()
+reload_dwm()
 {
 	quit(&((Arg){1}));
-
-
 }
