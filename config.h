@@ -174,6 +174,7 @@ static Key keys[] = {
 	{ MODKEY,             XK_space,  zoom,           {0} },
 	{ MODKEY|ShiftMask,   XK_space,  togglefloating, {0} },
 	{ MODKEY,             XK_m,      spawn,          SHCMD("pulsemixer --toggle-mute && pkill -RTMIN+4 dwmblocks") },
+	{ MODKEY,             XK_n,      spawn,          SHCMD("$TERMINAL -e newsboat ; pkill -RTMIN+16 dwmblocks") },
 	{ MODKEY,             XK_s,      togglesticky,   {0} },
 	{ MODKEY,             XK_f,      togglefullscr,  {0} },
 	{ MODKEY,             XK_0,      view,           {.ui = ~0 } },
@@ -207,10 +208,11 @@ static Key keys[] = {
 	{ MODKEY,             XK_Print,  spawn,          SHCMD("dmenurecord") },
 	{ MODKEY|ShiftMask,   XK_Print,  spawn,          SHCMD("dmenurecord kill") },
 	{ 0,                  XK_Insert, spawn,          SHCMD("dmenusnippets") },
-	{ MODKEY,             XK_F1,     spawn,          SHCMD("displayselect") },
-	{ MODKEY,             XK_F2,     spawn,          SHCMD("autosyncmail") },
-	{ MODKEY,             XK_F3,     spawn,          SHCMD("dmenumount") },
-	{ MODKEY,             XK_F4,     spawn,          SHCMD("dmenuumount") },
+	{ MODKEY,             XK_F1,     spawn,          SHCMD("cronnews") },
+	{ MODKEY,             XK_F2,     spawn,          SHCMD("cronmail") },
+	{ MODKEY,             XK_F9,     spawn,          SHCMD("dmenumount") },
+	{ MODKEY,             XK_F10,    spawn,          SHCMD("dmenuumount") },
+	{ MODKEY,             XK_F11,    spawn,          SHCMD("displayselect") },
 	{ MODKEY,	      XK_grave,  spawn,          SHCMD("dmenuunicode") },
 
 	/* Manage Volume */
