@@ -52,17 +52,18 @@ and (re)compiling the source code.
 1. FullScreen any program with Super+f
 2. Custom bar height
 3. Show number of windows in every tag
-4. Autostart required app from within dwm
-5. Window Gaps in all layouts
-6. Extra Layouts:
+4. Show Indicator for sticky window
+5. Autostart required app from within dwm
+6. Window Gaps in all layouts
+7. Extra Layouts:
 	1. Fibonacci Layout
 	2. Bottonstack Layout
-7. Application Scratchpads (like i3wm)
-8. Make a window sticky (follows u arround) Super+s
-9. Swallow useless windows
-10. Xresources color settings
-11. Systray Support
-12. fsignals
+8. Application Scratchpads (like i3wm)
+9. Make a window sticky (follows u arround) Super+s
+10. Swallow useless windows
+11. Xresources color settings
+12. Systray Support
+13. fsignals
 
 ## Patches Applied
 -------------
@@ -79,9 +80,10 @@ and (re)compiling the source code.
 11. dwm-scratchpads-20200414-728d397b.diff
 12. dwm-statuscmd-signal-6.2.diff
 13. dwm-sticky-6.1.diff
-14. dwm-swallow-20201211-61bb8b2.diff
-15. dwm-systray-20200914-61bb8b2.diff
-16. dwm-xresources-6.2.diff
+14. dwm-stickyindicator-6.2.diff
+15. dwm-swallow-20201211-61bb8b2.diff
+16. dwm-systray-20200914-61bb8b2.diff
+17. dwm-xresources-6.2.diff
 
 TODO:
 1. Statusbar Transparency

@@ -61,6 +61,10 @@ static Sp scratchpads[] = {
 	{"spvol",       spcmd5},
 };
 
+static const XPoint stickyicon[] = { {4,0}, {0,0}, {0,4}, {3,4}, {3,6}, {0,6}, {0,7}, {4,7}, {4,3}, {1,3}, {1,1}, {4,1}, {4,0} }; /* represents the icon as an array of vertices like in grade school math */
+static const XPoint stickyiconbb = {4,7}; /* defines the bottom right corner of the bounding box of the polygon (origin is always 0,0) */
+#define STICKYICONSH boxw * 2            /* defines the height of the final, scaled polygon as it will be drawn. boxw is equal to the width of the shape */
+
 /* tagging */
 static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
 /* window rules */
