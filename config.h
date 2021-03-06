@@ -35,11 +35,11 @@ static char *colors[][3] = {
 /* Cool Autostart */
 static const char *const autostart[] = {
 	"dunst",     NULL,    /* notifications server */
-	"dwmblocks", NULL,    /* dwmblocks statusbar  */
 	"remaps",    NULL,    /* key remaps           */
 	"unclutter", NULL,    /* Hide mouse when idle */
 	"wallp",     NULL,    /* wallpaper            */
 	"xcompmgr",  NULL,    /* Transparency Effects */
+	"dwmblocks-on_plug", NULL,    /* dwmblocks statusbar  */
 	NULL                  /* terminate            */
 };
 
