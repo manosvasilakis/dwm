@@ -64,6 +64,7 @@ and (re)compiling the source code.
 11. Xresources color settings
 12. Systray Support
 13. fsignals
+14. Per tag settings (layout, mwfact, barpos and nmaster)
 
 ## Patches Applied
 -------------
@@ -84,6 +85,7 @@ and (re)compiling the source code.
 15. dwm-swallow-20201211-61bb8b2.diff
 16. dwm-systray-20200914-61bb8b2.diff
 17. dwm-xresources-6.2.diff
+18. dwm-pertag-20200914-61bb8b2.diff
 
 TODO:
 1. Statusbar Transparency
