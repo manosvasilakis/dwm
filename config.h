@@ -39,7 +39,9 @@ static const char *const autostart[] = {
 	"unclutter", NULL,    /* Hide mouse when idle */
 	"wallp",     NULL,    /* wallpaper            */
 	"xcompmgr",  NULL,    /* Transparency Effects */
-	"dwmblocks-on_plug", NULL,    /* dwmblocks statusbar  */
+	"dwmblocks", NULL,    /* dwmblocks statusbar  */
+	"xautolock", "-time", "30", "-locker", "slock", NULL,
+                              /* autolockscreen       */
 	NULL                  /* terminate            */
 };
 
@@ -213,26 +215,26 @@ static Key keys[] = {
 	{ MODKEY,             XK_Print,  spawn,          SHCMD("dmenurecord") },
 	{ MODKEY|ShiftMask,   XK_Print,  spawn,          SHCMD("dmenurecord kill") },
 	{ 0,                  XK_Insert, spawn,          SHCMD("dmenusnippets") },
+	{ ControlMask,        XK_4,      spawn,          SHCMD("eurosign") },
 	{ MODKEY,             XK_F1,     spawn,          SHCMD("cronnews") },
 	{ MODKEY,             XK_F2,     spawn,          SHCMD("cronmail") },
-	{ MODKEY,             XK_F9,     spawn,          SHCMD("dmenumount") },
-	{ MODKEY,             XK_F10,    spawn,          SHCMD("dmenuumount") },
-	{ MODKEY,             XK_F11,    spawn,          SHCMD("displayselect") },
+	{ MODKEY,             XK_F3,     spawn,          SHCMD("displayselect") },
+	{ MODKEY|ShiftMask,   XK_F3,     spawn,          SHCMD("autorandr --change") },
+	{ MODKEY,             XK_F4,     spawn,          SHCMD("dmenumount") },
+	{ MODKEY|ShiftMask,   XK_F4,     spawn,          SHCMD("dmenuumount") },
 	{ MODKEY,	      XK_grave,  spawn,          SHCMD("dmenuunicode") },
-
 	/* Manage Volume */
-	{ ALTKEY,	      XK_0,      spawn,          SHCMD("pulsemixer --set-volume-all 100:100 && pkill -RTMIN+4 dwmblocks") },
-	{ ALTKEY|ShiftMask,   XK_0,      spawn,          SHCMD("pulsemixer --set-volume-all 0:0 && pkill -RTMIN+4 dwmblocks") },
-	{ ALTKEY,	      XK_1,      spawn,          SHCMD("pulsemixer --set-volume-all 10:10 && pkill -RTMIN+4 dwmblocks") },
-	{ ALTKEY,	      XK_2,      spawn,          SHCMD("pulsemixer --set-volume-all 20:20 && pkill -RTMIN+4 dwmblocks") },
-	{ ALTKEY,	      XK_3,      spawn,          SHCMD("pulsemixer --set-volume-all 30:30 && pkill -RTMIN+4 dwmblocks") },
-	{ ALTKEY,	      XK_4,      spawn,          SHCMD("pulsemixer --set-volume-all 40:40 && pkill -RTMIN+4 dwmblocks") },
-	{ ALTKEY,	      XK_5,      spawn,          SHCMD("pulsemixer --set-volume-all 50:50 && pkill -RTMIN+4 dwmblocks") },
-	{ ALTKEY,	      XK_6,      spawn,          SHCMD("pulsemixer --set-volume-all 60:60 && pkill -RTMIN+4 dwmblocks") },
-	{ ALTKEY,	      XK_7,      spawn,          SHCMD("pulsemixer --set-volume-all 70:70 && pkill -RTMIN+4 dwmblocks") },
-	{ ALTKEY,	      XK_8,      spawn,          SHCMD("pulsemixer --set-volume-all 80:80 && pkill -RTMIN+4 dwmblocks") },
-	{ ALTKEY,	      XK_9,      spawn,          SHCMD("pulsemixer --set-volume-all 90:90 && pkill -RTMIN+4 dwmblocks") },
-
+	/* { ALTKEY,	      XK_0,      spawn,          SHCMD("pulsemixer --set-volume-all 100:100 && pkill -RTMIN+4 dwmblocks") }, */
+	/* { ALTKEY|ShiftMask,   XK_0,      spawn,          SHCMD("pulsemixer --set-volume-all 0:0 && pkill -RTMIN+4 dwmblocks") }, */
+	/* { ALTKEY,	      XK_1,      spawn,          SHCMD("pulsemixer --set-volume-all 10:10 && pkill -RTMIN+4 dwmblocks") }, */
+	/* { ALTKEY,	      XK_2,      spawn,          SHCMD("pulsemixer --set-volume-all 20:20 && pkill -RTMIN+4 dwmblocks") }, */
+	/* { ALTKEY,	      XK_3,      spawn,          SHCMD("pulsemixer --set-volume-all 30:30 && pkill -RTMIN+4 dwmblocks") }, */
+	/* { ALTKEY,	      XK_4,      spawn,          SHCMD("pulsemixer --set-volume-all 40:40 && pkill -RTMIN+4 dwmblocks") }, */
+	/* { ALTKEY,	      XK_5,      spawn,          SHCMD("pulsemixer --set-volume-all 50:50 && pkill -RTMIN+4 dwmblocks") }, */
+	/* { ALTKEY,	      XK_6,      spawn,          SHCMD("pulsemixer --set-volume-all 60:60 && pkill -RTMIN+4 dwmblocks") }, */
+	/* { ALTKEY,	      XK_7,      spawn,          SHCMD("pulsemixer --set-volume-all 70:70 && pkill -RTMIN+4 dwmblocks") }, */
+	/* { ALTKEY,	      XK_8,      spawn,          SHCMD("pulsemixer --set-volume-all 80:80 && pkill -RTMIN+4 dwmblocks") }, */
+	/* { ALTKEY,	      XK_9,      spawn,          SHCMD("pulsemixer --set-volume-all 90:90 && pkill -RTMIN+4 dwmblocks") }, */
 	{ ALTKEY,             XK_space,  spawn,          SHCMD("sb-kbselect") },
 	{ MODKEY,             XK_Escape, quit,           {1} },
 	{ MODKEY|ShiftMask,   XK_Escape, spawn,          SHCMD("kill -9 -1") },
