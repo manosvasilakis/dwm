@@ -49,18 +49,18 @@ typedef struct {
 	const char *name;
 	const void *cmd;
 } Sp;
-const char *spcmd1[] = {"st", "-n", "spterm", "-g", "120x34", NULL };
-const char *spcmd2[] = {"st", "-n", "spfm",   "-g", "120x34", "-e", "ranger", NULL };
-const char *spcmd3[] = {"st", "-n", "spcalc", "-g", "50x20",  "-e", "bc", "-lq", NULL };
-const char *spcmd4[] = {"keepassxc", NULL };
-const char *spcmd5[] = {"st", "-n", "spvol",  "-g", "80x20",  "-e", "pulsemixer", NULL };
+const char *spcmd0[] = {"st", "-n", "spterm", "-g", "120x34", NULL };
+const char *spcmd1[] = {"st", "-n", "spfm",   "-g", "120x34", "-e", "ranger", NULL };
+const char *spcmd2[] = {"st", "-n", "spcalc", "-g", "50x20",  "-e", "bc", "-lq", NULL };
+const char *spcmd3[] = {"keepassxc", NULL };
+const char *spcmd4[] = {"st", "-n", "spvol",  "-g", "80x20",  "-e", "pulsemixer", NULL };
 static Sp scratchpads[] = {
 	/* name          cmd  */
-	{"spterm",      spcmd1},
-	{"spranger",    spcmd2},
-	{"spcalc",      spcmd3},
-	{"keepassxc",   spcmd4},
-	{"spvol",       spcmd5},
+	{ "spterm",      spcmd0 },
+	{ "spranger",    spcmd1 },
+	{ "spcalc",      spcmd2 },
+	{ "keepassxc",   spcmd3 },
+	{ "spvol",       spcmd4 },
 };
 
 static const XPoint stickyicon[] = { {4,0}, {0,0}, {0,4}, {3,4}, {3,6}, {0,6}, {0,7}, {4,7}, {4,3}, {1,3}, {1,1}, {4,1}, {4,0} }; /* represents the icon as an array of vertices like in grade school math */
@@ -220,6 +220,7 @@ static Key keys[] = {
 	{ MODKEY,             XK_F2,     spawn,          SHCMD("cronmail") },
 	{ MODKEY,             XK_F3,     spawn,          SHCMD("displayselect") },
 	{ MODKEY|ShiftMask,   XK_F3,     spawn,          SHCMD("autorandr --change") },
+	{ ALTKEY,             XK_F3,     spawn,          SHCMD("autorandr --change mobile") },
 	{ MODKEY,             XK_F4,     spawn,          SHCMD("dmenumount") },
 	{ MODKEY|ShiftMask,   XK_F4,     spawn,          SHCMD("dmenuumount") },
 	{ MODKEY,	      XK_grave,  spawn,          SHCMD("dmenuunicode") },
