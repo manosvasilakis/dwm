@@ -38,7 +38,7 @@ static const char *const autostart[] = {
 	"remaps",    NULL,    /* key remaps           */
 	"unclutter", NULL,    /* Hide mouse when idle */
 	"wallp",     NULL,    /* wallpaper            */
-	"xcompmgr",  NULL,    /* Transparency Effects */
+	"picom",     NULL,    /* Windows Effects      */
 	"dwmblocks", NULL,    /* dwmblocks statusbar  */
 	"xautolock", "-time", "30", "-locker", "slock", NULL,
                               /* autolockscreen       */
