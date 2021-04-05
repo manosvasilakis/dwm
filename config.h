@@ -219,7 +219,7 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,   XK_Print,  spawn,          SHCMD("dmenurecord kill") },
 	{ 0,                  XK_Insert, spawn,          SHCMD("dmenusnippets") },
 	{ MODKEY,             XK_F1,     spawn,          SHCMD("cronnews") },
-	{ MODKEY,             XK_F2,     spawn,          SHCMD("cronmail") },
+	{ MODKEY,             XK_F2,     spawn,          SHCMD("cronmail -manual") },
 	{ MODKEY,             XK_F3,     spawn,          SHCMD("displayselect") },
 	{ MODKEY|ShiftMask,   XK_F3,     spawn,          SHCMD("autorandr --change; notify-send \"Toggled Display Profiles\"") },
 	{ ALTKEY,             XK_F3,     spawn,          SHCMD("autorandr --change mobile; notify-send \"Display Profile:\" \"changed to 'mobile'\"") },
